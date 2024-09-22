@@ -1,4 +1,11 @@
 const container = document.querySelector(".container")
+const black = document.querySelector("#black")
+const red = document.querySelector("#red")
+const brown = document.querySelector("#brown")
+const blue = document.querySelector("#blue")
+const green = document.querySelector("#green")
+
+
 
 function createGrid(size){
     container.innerHTML = ''
@@ -13,8 +20,9 @@ function createGrid(size){
         div.style.height = `${squareSize}px`
 
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = "brown"
+            div.style.backgroundColor = selectedColor;
         })
+        
 
         container.appendChild(div)
 
@@ -28,6 +36,25 @@ const add = document.querySelector("#add")
 
 
 
+black.addEventListener("mouseover", () => {
+    selectedColor = "black"
+})
+
+red.addEventListener("mouseover", () => {
+    selectedColor = "red"
+})
+
+brown.addEventListener("mouseover", () => {
+    selectedColor = "brown"
+})
+
+blue.addEventListener("mouseover", () => {
+    selectedColor = "blue"
+})
+
+green.addEventListener("mouseover", () => {
+    selectedColor = "green"
+})
 
 function getButton(){
     add.addEventListener("click", () => {

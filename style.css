@@ -19,3 +19,7 @@ body{
     flex-direction: column;
     align-items: center;
 }
+
+.color-buttons{
+    padding-top: 10px;
+}
